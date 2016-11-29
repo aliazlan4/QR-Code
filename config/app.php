@@ -38,7 +38,7 @@ return [
     |
     */
 
-    'debug' => env('APP_DEBUG', false),
+    'debug' => env('APP_DEBUG', true),
 
     /*
     |--------------------------------------------------------------------------
@@ -178,6 +178,10 @@ return [
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
 
+        //Added by Ali Azlan (29-11-2016)
+        //This line is to configure QR-code generator package of laravel
+        SimpleSoftwareIO\QrCode\QrCodeServiceProvider::class,
+
     ],
 
     /*
@@ -226,6 +230,9 @@ return [
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View' => Illuminate\Support\Facades\View::class,
 
+        //Added by Ali Azlan (29-11-2016)
+        //This line is to configure QR-code generator package of laravel
+        'QrCode' => SimpleSoftwareIO\QrCode\Facades\QrCode::class,
     ],
 
 ];
