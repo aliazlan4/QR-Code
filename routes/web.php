@@ -21,3 +21,6 @@ Route::get('/home', 'HomeController@index');
 
 
 Route::post('/addQRCode', 'QRCodeController@addQRCode');
+Route::get('/showQRCode/{shortcode}', 'QRCodeController@showQRCode');
+
+Route::get('/c/{shortcode}', 'QRCodeController@openQRCode');
